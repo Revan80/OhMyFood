@@ -1,0 +1,45 @@
+$main-color: red;
+
+.btn {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
+  height: 1000px;
+  flex-direction: column;
+
+  &__rocket {
+    height: 100px;
+    width: 150px;
+    background-image: url("images/download.png");
+    background-size: cover;
+    transition-property: transform;
+    transition-duration: 5s;
+    transition-delay: 2s;
+    transition-timing-function: ease-in-out;
+
+    &:hover {
+      transform: translateY(-4000px);
+    }
+    &:active {
+      transform: translateX(400px);
+      transition-delay: 1s;
+    }
+  }
+
+  &__message {
+    width: 100px;
+    height: 50px;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    justify-content: center;
+    color: white;
+    font-family: fantasy;
+
+    &:hover {
+      color: blue;
+    }
+  }
+}
