@@ -1,41 +1,19 @@
-.btn {
+body {
+  width: 100%;
+  background-color: #f6f6f6;
+}
+body header {
   display: flex;
-  align-items: flex-end;
   justify-content: center;
-  align-items: center;
-  height: 1000px;
-  flex-direction: column;
 }
-.btn__rocket {
-  height: 100px;
-  width: 150px;
-  background-image: url("images/download.png");
-  background-size: cover;
-  transition-property: transform;
-  transition-duration: 5s;
-  transition-delay: 2s;
-  transition-timing-function: ease-in-out;
-}
-.btn__rocket:hover {
-  transform: translateY(-4000px);
-}
-.btn__rocket:active {
-  transform: translateX(400px);
-  transition-delay: 1s;
-}
-.btn__message {
-  width: 100px;
-  height: 50px;
-  background-color: red;
+body .localisation__text {
   display: flex;
-  align-items: center;
-  border-radius: 5px;
   justify-content: center;
-  color: white;
-  font-family: fantasy;
+  font-size: 2.8rem;
+  font-weight: 700;
 }
-.btn__message:hover {
-  color: blue;
+body img {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

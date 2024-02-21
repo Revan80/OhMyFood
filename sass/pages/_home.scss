@@ -1,0 +1,21 @@
+body
+{
+    width:100%;
+    background-color:$background;
+
+    header{
+        display:flex;
+        justify-content: center;
+    }
+    
+    .localisation__text{
+        display:flex;
+        justify-content: center;
+        font-size:2.8rem;
+        font-weight: 700;
+        }
+
+        img{
+            width:100%;
+        }
+}
