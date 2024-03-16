@@ -1,0 +1,28 @@
+footer{
+    background-color: #353535;
+
+    .footer__element{
+        margin-left:45px;
+        padding: 25px;
+    
+        &__title{
+            font-size:35px;
+            margin-left:35px;
+            color:white;
+        }
+
+        &__list{
+            color:white;
+            font-weight: bold;
+
+
+            .list__liens{
+                font-size:25px;
+                margin-bottom:15px;
+            }
+        }
+    }
+    .fa-solid{
+        margin-right:15px;
+    }
+}

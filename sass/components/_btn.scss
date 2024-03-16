@@ -1,0 +1,215 @@
+.hero__btn{
+    color: white;
+    padding: 2rem 3rem;
+    text-align: center;
+    background: #ff79da;
+    background: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
+    margin: 4rem auto;
+    border-radius: 60px;
+    font-size:35px;
+    margin-top:15px;
+    &:hover{
+        background: linear-gradient(180deg, #ff99e2 0%, #dc7bff 100%);
+        box-shadow: 1px 11px 14px 0px rgba(109, 109, 109, 0.699);
+        
+    }
+}
+
+// coeur pages à coté du titre
+.menuWrapper__heart{
+    position:relative;
+
+   &-empty{
+        font-size: 55px;
+        height: 60px;
+        transition:transform 2000ms;
+    
+    } 
+    
+   &-full{
+    font-size: 55px;
+    height: 60px;
+    transition:transform 2000ms;
+    color: transparent;
+    position:absolute;
+    top:0px;
+    left:0px;
+    transition:transform;
+    transform:scale(0);
+    transition-duration: 2s;
+    transform-origin:50% 80%;
+    background: -webkit-linear-gradient(13deg, #ff79da 0%, #ba62db 66%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    cursor: pointer;
+
+    } 
+
+}
+
+.menuWrapper__heart:hover{
+    .menuWrapper__heart-full{
+    transform:scale(1);
+    font-weight: bold;
+    } 
+}
+
+
+.menuWrapper .menuList__title::after {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 3px;
+    background-color: teal;
+    margin-top: 5px;
+}
+
+//coeur index cartes
+.cards1__description__heart{
+    font-size:45px;
+}
+
+
+.menuWrapper_allMenus__menuList{
+    position:relative;
+    //overflow: hidden;
+}
+
+
+//volet déroulant
+
+.menuWrapper__icon{
+    background-color: #99e2d0;
+   // margin: -1rem -11rem -1rem 1rem;
+   //width: 12rem;
+   width:0%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    //transform: translateX(0px);
+    //transition: transform 350ms ease-in-out;
+    //transition: opacity 1s;
+    //position:absolute;
+    //top:15px;
+    //right:0px;
+    border-radius: 0px 30px 35px 0px;
+    opacity: 0; 
+    
+    & > i{
+        color:#99e2d0;
+        background-color:white;
+        width: 50px; 
+      height: 50px; 
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      transform: rotate(-70deg);
+      transition:transform 1000ms;
+    }
+}
+.menuItem__icon{
+  // position:relative;
+   //right: 15px;
+}
+.menuWrapper_allMenus__menuList:hover > .menuWrapper__icon > i{
+    transform: rotate(0deg);
+}
+
+
+.menuWrapper_allMenus__menuList:hover > .menuWrapper__icon{
+    //transform:translateX(-140px);
+    width:15%;
+    border-radius: 0px 30px 35px 0px;
+    opacity: 1;
+}
+
+.menuWrapper_allMenus__menuList__prix{
+   // transform: translateX(-15px);
+    //transition: transform 350ms ease-in-out;
+}
+
+.menuWrapper_allMenus__menuList:hover > .menuWrapper__icon{
+    transform:translateX(-140px);
+    border-radius: 0px 30px 35px 0px;
+    opacity: 1;
+}
+.menuWrapper_allMenus__menuList:hover > .menuWrapper_allMenus__menuList__prix{
+    transform:translateX(-140px);
+    
+}
+
+// Transition fondue
+
+.menuWrapper_allMenus__menuList{
+    animation-name: transition-fondue;
+    animation-delay: 3300ms;
+    animation-duration: 1s;
+    transform: translateY(-60px);
+    opacity:0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes transition-fondue {   
+    100%{
+        transform:translateY(0px);
+        opacity:1;
+    }
+}
+
+
+
+// loader
+
+.loader-container{
+    position:fixed;
+    left:0px;
+    top:0;
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(0, 0%, 100%);
+    animation: fadeOut 300ms ease 3s forwards;
+
+    
+}
+
+@keyframes fadeOut {
+ to{
+    opacity: 0;
+    display: none;
+ }
+}
+
+
+.dot{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background: #000;
+    margin: 0 15px;
+    animation: loader infinite 0.3s alternate;
+}
+
+
+
+@keyframes loader {
+
+    to{
+        transform: translateY(-30px);
+    }
+
+}
+
+
+.menuList__info__texte{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
