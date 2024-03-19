@@ -73,74 +73,61 @@
 
 .menuWrapper_allMenus__menuList{
     position:relative;
-    //overflow: hidden;
 }
 
 
 //volet déroulant
+.menuWrapper_allMenus__menuList {
+    display: flex;
+    align-items: center;
+    transition: all 0.5s ease;
+    border: 1px solid #ccc;
+    &:hover {
+        .menuWrapper_allMenus__menuList__prix{
+            transition: transform 0.5s ease;
+        }
+        .menuWrapper_allMenus__menuList__prix,
+        .menuWrapper__icon {
+          transform: translateX(-55px);
+          opacity: 1;
+          margin-left: 35px;
+        }
+      }
+  }
+  
+  
+  .menuList__info {
+    flex-grow: 1;
+    overflow: hidden;
+    &__title, &__texte {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+  }
+  
 
-.menuWrapper__icon{
-    background-color: #99e2d0;
-   // margin: -1rem -11rem -1rem 1rem;
-   //width: 12rem;
-   width:0%;
-    height: 100%;
+  .menuWrapper__icon {
+    background-color: rgb(153, 226, 208);
+    width: 150px;
+    height:165px;
     display: flex;
     align-items: center;
     justify-content: center;
-    //transform: translateX(0px);
-    //transition: transform 350ms ease-in-out;
-    //transition: opacity 1s;
-    //position:absolute;
-    //top:15px;
-    //right:0px;
-    border-radius: 0px 30px 35px 0px;
-    opacity: 0; 
-    
-    & > i{
-        color:#99e2d0;
-        background-color:white;
-        width: 50px; 
-      height: 50px; 
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-weight: bold;
-      transform: rotate(-70deg);
-      transition:transform 1000ms;
+    transition-duration: 0.5s;
+    margin: -1rem -5rem -1rem 0rem;
+    border-radius: 0px 15px 15px 0px;
+    opacity:0;
+    i{
+        font-size: 45px;
     }
-}
-.menuItem__icon{
-  // position:relative;
-   //right: 15px;
-}
-.menuWrapper_allMenus__menuList:hover > .menuWrapper__icon > i{
-    transform: rotate(0deg);
-}
+  }
 
+  .menuItem__icon {
+    color: white;
+  }
+  
 
-.menuWrapper_allMenus__menuList:hover > .menuWrapper__icon{
-    //transform:translateX(-140px);
-    width:15%;
-    border-radius: 0px 30px 35px 0px;
-    opacity: 1;
-}
-
-.menuWrapper_allMenus__menuList__prix{
-   // transform: translateX(-15px);
-    //transition: transform 350ms ease-in-out;
-}
-
-.menuWrapper_allMenus__menuList:hover > .menuWrapper__icon{
-    transform:translateX(-140px);
-    border-radius: 0px 30px 35px 0px;
-    opacity: 1;
-}
-.menuWrapper_allMenus__menuList:hover > .menuWrapper_allMenus__menuList__prix{
-    transform:translateX(-140px);
-    
-}
 
 // Transition fondue
 
