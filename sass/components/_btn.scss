@@ -80,8 +80,6 @@
 .menuWrapper_allMenus__menuList {
     display: flex;
     align-items: center;
-    transition: all 0.5s ease;
-    border: 1px solid #ccc;
     &:hover {
         .menuWrapper_allMenus__menuList__prix{
             transition: transform 0.5s ease;
@@ -92,6 +90,9 @@
           opacity: 1;
           margin-left: 35px;
         }
+        .menuItem__icon{
+            transform:rotate(0deg);
+            transition: transform 500ms ease-in-out;
       }
   }
   
@@ -124,9 +125,20 @@
   }
 
   .menuItem__icon {
-    color: white;
+    color: #99e2d0;
+    background-color: white;
+    border-radius:50px;
+    transform: rotate(-90deg);
+    width:75px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  
+
+  .menuItem__icon i{
+    color:#99e2d0;
+  }
 
 
 // Transition fondue
@@ -200,3 +212,4 @@
     white-space: nowrap;
 }
 
+}

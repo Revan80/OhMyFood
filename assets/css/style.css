@@ -375,8 +375,6 @@ footer .fa-solid {
 .menuWrapper_allMenus__menuList {
   display: flex;
   align-items: center;
-  transition: all 0.5s ease;
-  border: 1px solid #ccc;
 }
 .menuWrapper_allMenus__menuList:hover .menuWrapper_allMenus__menuList__prix {
   transition: transform 0.5s ease;
@@ -387,18 +385,20 @@ footer .fa-solid {
   opacity: 1;
   margin-left: 35px;
 }
-
-.menuList__info {
+.menuWrapper_allMenus__menuList:hover .menuItem__icon {
+  transform: rotate(0deg);
+  transition: transform 500ms ease-in-out;
+}
+.menuWrapper_allMenus__menuList .menuList__info {
   flex-grow: 1;
   overflow: hidden;
 }
-.menuList__info__title, .menuList__info__texte {
+.menuWrapper_allMenus__menuList .menuList__info__title, .menuWrapper_allMenus__menuList .menuList__info__texte {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
-.menuWrapper__icon {
+.menuWrapper_allMenus__menuList .menuWrapper__icon {
   background-color: rgb(153, 226, 208);
   width: 150px;
   height: 165px;
@@ -410,15 +410,24 @@ footer .fa-solid {
   border-radius: 0px 15px 15px 0px;
   opacity: 0;
 }
-.menuWrapper__icon i {
+.menuWrapper_allMenus__menuList .menuWrapper__icon i {
   font-size: 45px;
 }
-
-.menuItem__icon {
-  color: white;
+.menuWrapper_allMenus__menuList .menuItem__icon {
+  color: #99e2d0;
+  background-color: white;
+  border-radius: 50px;
+  transform: rotate(-90deg);
+  width: 75px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.menuWrapper_allMenus__menuList {
+.menuWrapper_allMenus__menuList .menuItem__icon i {
+  color: #99e2d0;
+}
+.menuWrapper_allMenus__menuList .menuWrapper_allMenus__menuList {
   animation-name: transition-fondue;
   animation-delay: 3300ms;
   animation-duration: 1s;
@@ -426,14 +435,13 @@ footer .fa-solid {
   opacity: 0;
   animation-fill-mode: forwards;
 }
-
 @keyframes transition-fondue {
   100% {
     transform: translateY(0px);
     opacity: 1;
   }
 }
-.loader-container {
+.menuWrapper_allMenus__menuList .loader-container {
   position: fixed;
   left: 0px;
   top: 0;
@@ -445,14 +453,13 @@ footer .fa-solid {
   background-color: hsl(0, 0%, 100%);
   animation: fadeOut 300ms ease 3s forwards;
 }
-
 @keyframes fadeOut {
   to {
     opacity: 0;
     display: none;
   }
 }
-.dot {
+.menuWrapper_allMenus__menuList .dot {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -460,13 +467,12 @@ footer .fa-solid {
   margin: 0 15px;
   animation: loader infinite 0.3s alternate;
 }
-
 @keyframes loader {
   to {
     transform: translateY(-30px);
   }
 }
-.menuList__info__texte {
+.menuWrapper_allMenus__menuList .menuList__info__texte {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
