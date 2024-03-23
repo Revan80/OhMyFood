@@ -86,6 +86,7 @@ position:relative;
     display: flex;
     justify-content: space-between;
     max-width: 100%;
+    display:inline-flex;
 }
 
 &__prix{
@@ -107,9 +108,103 @@ position:relative;
     margin-top:0px;
 }
 
-
-.hero__btn {
-    display:flex;
-    justify-content: center;
-    margin-top:100px;
+.menuWrapper .menuList__title::after {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 3px;
+    background-color: teal;
+    margin-top: 5px;
 }
+
+//volet déroulant
+.menuWrapper_allMenus__menuList{
+    //display: flex;
+    //justify-content: space-between;
+    //position:relative;
+.menuList__info{
+    max-width: 100%;
+    &__title,&__texte{
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    &__title{
+        font-size:40px;
+    }
+}
+}
+
+
+
+.menuWrapper__icon{
+    display:inline-block;
+    width:150px;
+    height:170px;
+    box-sizing: border-box;
+    //position:absolute;
+    //top:0px;
+    //right:0px;
+    transform: scale(0);
+    border-radius: 0px 35px 35px 0px;
+    opacity:0;
+    background-color: #99e2d0;
+    .menuItem__icon{
+        position: relative;
+        top:30%;
+        left: 30%;
+        font-size: 55px;
+        background-color: white;
+        color: #99e2d0;
+        border-radius: 65px;
+        width:65px;
+        height:65px;
+        padding: 5px;
+        text-align: center;
+        transform:rotate(60deg);
+        }
+}
+.menuList__content{
+    display:inline-flex;
+}
+
+.menuWrapper_allMenus__menuList:hover{
+    .menuWrapper__icon{
+        transform:translateX(10px);
+        transition: 500ms ease-in-out;
+        opacity:1;
+        transform:scale(1);
+    }
+    .menuWrapper_allMenus__menuList__prix{
+        /*transform: translateX(-120px);
+        transition: 500ms ease-in-out;
+        width:100px;*/
+    }
+    .menuList__info{
+        &__title,&__texte{
+           width:70%;
+        }
+    }
+    .menuItem__icon{
+        transform:rotate(0deg);
+        transition: transform 900ms ease-out;
+        }
+}
+
+// Transition fondue
+
+.menuWrapper_allMenus__menuList{
+    animation-name: transition-fondue;
+    animation-delay: 3300ms;
+    animation-duration: 1s;
+    transform: translateY(-60px);
+    opacity:0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes transition-fondue {   
+    100%{
+        transform:translateY(0px);
+        opacity:1;
+    }
+}
+
