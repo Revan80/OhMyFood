@@ -1,24 +1,46 @@
 footer{
     background-color: #353535;
+    @include desktop{
+    }
 
     .footer__element{
         margin-left:45px;
         padding: 25px;
-    
+        @include desktop{
+            display:flex;
+            flex-direction: row-reverse;
+            justify-content: end;
+            padding-top:200px;
+            padding-bottom:70px;
+        }
+
         &__title{
             font-size:35px;
             margin-left:35px;
             color:white;
+            font-family: Shrikhand;
+            @include desktop{
+                font-size:75px;
+                color:white;
+                margin-right: 200px;
+            }
         }
 
         &__list{
             color:white;
             font-weight: bold;
+            @include desktop{
+                display:flex;
+                width:50%;
+            }
 
 
             .list__liens{
                 font-size:25px;
                 margin-bottom:15px;
+                @include desktop{
+                    font-size: 55px;
+                }
             }
         }
     }
@@ -26,3 +48,4 @@ footer{
         margin-right:15px;
     }
 }
+
