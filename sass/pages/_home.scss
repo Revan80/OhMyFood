@@ -1,8 +1,11 @@
-* img,li{
-    width:100%;
+*li{
     list-style-type: none;
     font-family: "Roboto";
 }
+a:visited {
+    color:black;
+    text-decoration: none;
+  }
 
 a{
     text-decoration: none;
@@ -31,6 +34,9 @@ body {
 
     &__text{
         margin-top: 10px;
+        @include desktop{
+            margin-top:0px;
+        }
     }
 
     .fa-solid {
@@ -40,11 +46,23 @@ body {
     //RESPONSIVE
     @include desktop{
         &__text {
-            font-size:80px;
+            font-size:25px;
         }
         .fa-solid {
-            font-size:75px;
+            font-size:25px;
             margin-top: 6px;
+            margin-right:25px;
+        }
+    }
+    @include tablet{
+        &__text {
+            font-size:25px;
+            padding-right:20px;
+        }
+        .fa-solid {
+            font-size:25px;
+            margin-top: 6px;
+            margin-right:25px;
         }
     }
 }
@@ -54,7 +72,6 @@ body {
     display:flex;
     flex-direction: column;
     justify-content: center;
-    padding-bottom:90px;
 
     &__title{
         font-size:70px;
@@ -69,11 +86,22 @@ body {
     //RESPONSIVE
     @include desktop{
         &__title{
-            font-size:150px;
+            font-size:70px;
             font-weight: bold;
         }  
         &__text{
-            font-size:68px;
+            font-size:28px;
+        } 
+    }
+    @include tablet{
+        &__title{
+            font-size:40px;
+            font-weight: bold;
+            max-width: 400px; 
+            margin:auto;
+        }  
+        &__text{
+            font-size:28px;
         } 
     }
 }
@@ -83,24 +111,45 @@ body {
     background-color:#ffffff;
     padding-top:20px;
     box-shadow: rgba(50, 50, 93, 0) 0px 5px 20px 0px, rgba(0, 0, 0, 0.3) -1px 5px 30px -10px;
+    @include desktop{
+        padding-bottom:0px;
+    }
     .fa-store{
         color:$couleurs-btn
     }
 
-
     &__container__titre{
         font-size:70px;
         @include desktop{
-            font-size:100px;
+            font-size:25px;
             font-weight: bold;
-            margin-left:500px;
+            margin-left:100px;
+            padding: 0rem;
+        }
+        @include tablet{
+            font-size:30px;
+            font-weight: bold;
+            margin-left:38px;
         }
     }
 
     .fa-solid{
         position: relative;
-        right: 50px;
+        right: 5px;
         top: 3PX;
+        margin-right:15px;
+        @include desktop{
+            position: relative;
+            right: 5px;
+            top: 3PX;
+            margin-right:0px;
+        }
+    }
+    @include tablet{
+        font-size: 25px;
+        position: relative;
+        right: 10px;
+        top:0px;
     }
 
     &__container__choix{
@@ -121,9 +170,15 @@ body {
         font-size:45px;
         margin-bottom:45px;
         @include desktop{
-            width:20%;
-            font-size:65px;
-            padding:4rem;
+            width:25%;
+            height: 50%;
+            font-size:25px;
+            padding:1.5rem;
+        }
+        @include tablet{
+            width:90%;
+            font-size:20px;
+            padding: 1.5rem;
         }
     }
 
@@ -143,36 +198,51 @@ body {
         color: #ffffff;
         text-align: center;
         @include desktop{
-            height: 120px;
-            width: 120px;
-            font-size:55px;
+            height: 30px;
+            width: 31px;
+            font-size:15px;
             position: relative;
-            right:115px;
+            right:35px;
+        }
+        @include tablet{
+            height: 30px;
+            width: 31px;
+            font-size:20px;
+            position: relative;
+            right:40px;
         }
     }
     &__text{
         font-weight:bold;
+        @include desktop{
+            font-size:20px;
+            margin-left:20px;
+        }
+        @include tablet{
+            display: flex;
+            align-items: center;
+            font-size:23px
+        }
+        
     }
-   
 }
 
 
 // Restaurant
-
 .restaurants{
     width:85%;
     margin:auto;
     border-radius:20px;
-    @include desktop{
-        padding-bottom:200px;
-    }
     &__title{
         font-size: 2.56rem;
-        font-weight: 900;
+        font-weight: bold;
         @include desktop{
-            font-size:70px;
+            font-size:20px;
             font-weight: bold;
-            margin-left:75px;
+            margin-left:30px;
+        }
+        @include tablet{
+            font-size:30px;
         }
     }
 
@@ -196,9 +266,15 @@ body {
         border-radius:35px;
         overflow: hidden;
         position:relative;
+        height: 500px;
         @include desktop{
-            width:40%;
-            height: 1000px;
+            width:60%;
+            height: 300px;
+            margin-left:30px;
+        }
+        @include tablet{
+            width:100%;
+            height: 300px;
         }
 
         &__description{
@@ -210,7 +286,7 @@ body {
 
             &__badge{
                 background-color: #99e2d0;
-                color: #2c9c81;
+                color: rgb(27, 97, 80);
                 padding:0.8rem 0rem 0.8rem;
                 border-radius: 0.125rem;
                 font-size: 35px;
@@ -219,8 +295,17 @@ body {
                 position: absolute;
                 top: 10px;
                 right:10px;
+                font-family: 'Roboto';
+                font-weight: 500;
                 @include desktop{
-                    font-size:65px;
+                    font-size:20px;
+                    padding:0.5rem;
+                    right:20px;
+                }
+                @include tablet{
+                    font-size:15px;
+                    padding:0.5rem;
+                    right:20px;
                 }
                 
             }
@@ -233,14 +318,20 @@ body {
                     font-size:45px;
                     margin:0px;
                     @include desktop{
-                        font-size:70px;
+                        font-size:20px;
+                    }
+                    @include tablet{
+                        font-size:22px;
                     }
                 }
                 &__paragraphCard{
                     font-size:35px;
                     margin:0px;
                     @include desktop{
-                        font-size:65px;
+                        font-size:20px;
+                    }
+                    @include tablet{
+                        font-size:20px;
                     }
                 }
                 
@@ -249,8 +340,13 @@ body {
 
         &__image{
                 height:70%;
+                width:100%;
                 object-fit: cover;
                 background-size: cover;
+                @include desktop{
+                    width:100%;
+                    height: 200px;
+                }
                 
             }
         }

@@ -10,59 +10,108 @@
     margin-top:15px;
     display:flex;
     justify-content: center;
+    border:none;
     @include desktop{
-        font-size:65px;
-        padding: 3rem 6rem;
+        font-size:25px;
+        padding: 1rem 2rem;
+        margin-top:35px;
+    }
+    @include tablet{
+        font-size:25px;
+        padding: 1rem 2rem;
     }
     &:hover{
         background: linear-gradient(180deg, #ff99e2 0%, #dc7bff 100%);
-        box-shadow: 1px 11px 14px 0px rgba(109, 109, 109, 0.699);
-        
     }
 }
 
 // coeur pages à coté du titre des pages restaurants
-.menuWrapper__heart{
+.heart{
     position:relative;
 
    &-empty{
         font-size: 55px;
         height: 60px;
         transition:transform 2000ms;
-    
-    } 
-    
+        @include desktop{
+            font-size: 35px;
+            height: 40px;
+        }
+        @include tablet{
+            font-size: 30px;
+            height: 35px;
+        }
+    }
+
    &-full{
-    font-size: 55px;
-    height: 60px;
-    transition:transform 2000ms;
-    color: transparent;
-    position:absolute;
-    top:0px;
-    left:0px;
-    transition:transform;
-    transform:scale(0);
-    transition-duration: 2s;
-    transform-origin:50% 80%;
-    background: -webkit-linear-gradient(13deg, #ff79da 0%, #ba62db 66%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: bold;
-    cursor: pointer;
-    } 
+        font-size: 55px;
+        height: 60px;
+        transition:transform 2000ms;
+        color: transparent;
+        position:absolute;
+        top:0px;
+        left:0px;
+        transition:transform;
+        transform:scale(0);
+        transition-duration: 2s;
+        transform-origin:50% 80%;
+        background: -webkit-linear-gradient(13deg, #ff79da 0%, #ba62db 66%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: bold;
+        cursor: pointer;
+        @include desktop{
+            font-size: 35px;
+            height: 40px;
+        }
+        @include tablet{
+            font-size: 30px;
+            height: 35px;
+        }
+    }
+    &-full-variante{
+        font-size: 55px;
+        height: 60px;
+        transition:transform 2000ms;
+        color: transparent;
+        position:absolute;
+        top:0px;
+        right:0px;
+        transition:transform;
+        transform:scale(0);
+        transition-duration: 2s;
+        transform-origin:50% 80%;
+        background: -webkit-linear-gradient(13deg, #ff79da 0%, #ba62db 66%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: bold;
+        cursor: pointer;
+        @include desktop{
+            font-size: 35px;
+            height: 40px;
+        }
+        @include tablet{
+        
+        }
+    }
+    
 }
-
-.menuWrapper__heart:hover{
-    .menuWrapper__heart-full{
-    transform:scale(1);
-    font-weight: bold;
-    } 
-}
-
+    .heart:hover{
+        .heart-full{
+            transform:scale(1);
+        } 
+    }
+    .menuWrapper__heart:hover{
+        .heart-full-variante{
+            transform: scale(1);
+        }
+    }
+    
 
 
 //coeur index cartes
-/*.cards1__description__heart{
+
+/*.cards1__description__heart{ 
     font-size:45px;
 
      @include desktop{
@@ -74,7 +123,7 @@
 }*/
 
 // coeur cartes restaurants index
-.index__heart{
+/*.index__heart{
     position:relative;
 
    &-empty{
@@ -118,7 +167,7 @@
         font-weight: bold;
     } 
 }
-
+*/
 
 // loader
 

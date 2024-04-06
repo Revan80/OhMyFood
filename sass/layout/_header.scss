@@ -4,6 +4,10 @@
     padding: 60px 0 30px;
     box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.25);
     position:relative;
+    @include desktop{
+        padding-top:20px;
+        padding-bottom:20px;
+    }
 
         &__arrow__icon{
             font-size:54px;
@@ -11,15 +15,27 @@
             top:60px;
             left:65px;
             @include desktop{
-                font-size:84px;
-                top:40px;
+                font-size:25px;
+                top:30px;
                 left:65px;
             }
+            @include tablet{
+                font-size:30px;
+                top:70px;
+                left:65px;
             }
-        &__img {
-             width: 100%;
-                @include desktop{
-                    width:180%;
-                 }
-             }
     }
+
+         &__img{
+          width: 100%;
+         @include desktop{
+            width:60%;
+            margin-left:105px;
+            }
+            @include tablet{
+                width:60%;
+                margin-left:105px;
+            }
+        }
+}
+
