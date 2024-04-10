@@ -75,8 +75,8 @@
         transition:transform 2000ms;
         color: transparent;
         position:absolute;
-        top:0px;
-        right:0px;
+        top:107px;
+        left:860px;
         transition:transform;
         transform:scale(0);
         transition-duration: 2s;
@@ -89,9 +89,16 @@
         @include desktop{
             font-size: 35px;
             height: 40px;
+            position:relative;
+            top:0px;
+            left:-39px;
         }
         @include tablet{
-        
+        font-size:30px;
+        height: 35px;
+        position:relative;
+        top:0px;
+        left:-35px;
         }
     }
     
