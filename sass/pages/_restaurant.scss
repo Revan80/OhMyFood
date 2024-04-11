@@ -19,17 +19,6 @@ p{
     font-family: 'Roboto';
 }
 
-
-/*.header{
-    position:relative;
-        &__arrow__icon{
-            font-size:54px;
-            position:absolute;
-            top:60px;
-            left:65px;
-        }
-}
-*/
 .imageMain{
     object-fit: cover;
     width: 100%;
@@ -51,7 +40,6 @@ p{
     @include desktop{
         width:60%;
         margin-left:20%;
-        //padding-left:100px;
     }
     @include tablet{
         border-radius: 3rem 3rem 0 0;
@@ -133,4 +121,3 @@ p{
         opacity:1;
     }
 }
-
