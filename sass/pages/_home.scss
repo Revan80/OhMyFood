@@ -34,8 +34,10 @@ body {
 
     &__text{
         margin-top: 10px;
+        padding-right:65px;
         @include desktop{
             margin-top:0px;
+            padding-right:20px;
         }
     }
 

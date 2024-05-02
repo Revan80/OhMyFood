@@ -33,13 +33,13 @@ p{
 
 .menuWrapper{
     border-radius: 6rem 6rem 0 0;
-    background: whitesmoke;
+      background: whitesmoke;
     padding: 2rem;
-    position: relative;
+        position: relative;
     margin-top: -6rem;
     @include desktop{
         width:60%;
-        margin-left:20%;
+        margin-left:19%;
     }
     @include tablet{
         border-radius: 3rem 3rem 0 0;
@@ -101,23 +101,5 @@ p{
             width:10%;
 
         }
-    }
-}
-
-
-// Transition fondue
-.menuWrapper_allMenus__menuList{
-    animation-name: transition-fondue;
-    animation-delay: 3300ms;
-    animation-duration: 1s;
-    transform: translateY(-60px);
-    opacity:0;
-    animation-fill-mode: forwards;
-}
-
-@keyframes transition-fondue {   
-    100%{
-        transform:translateY(0px);
-        opacity:1;
     }
 }

@@ -10,3 +10,20 @@
     }
 }
 
+
+
+@mixin fade-transition{
+    animation-name: fade-animation;
+    animation-delay: 3300ms;
+    animation-duration: 1s;
+    transform: translateY(-60px);
+    opacity:0;
+    animation-fill-mode: forwards; 
+}
+
+@keyframes fade-animation {   
+    100%{
+        transform:translateY(0px);
+        opacity:1;
+    }
+}
