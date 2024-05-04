@@ -232,7 +232,6 @@
 .heart-full {
   font-size: 55px;
   height: 60px;
-  transition: transform 2000ms;
   color: transparent;
   position: absolute;
   top: 0px;
